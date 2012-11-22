@@ -1,0 +1,265 @@
+/*
+	Zeroing CSS
+*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, em, img, strong, sub, sup, b, u, i, blockquote, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font: inherit;
+	font-size: 100%;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+select {
+	margin: 0;
+}
+
+
+/*
+	General
+*/
+html, body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: fixed #fdfdfd url(/images/shishmakov.jpg) right bottom no-repeat;
+	font: normal 13px 'Segoe UI', Arial, sans-serif;
+	color: #e1dede;
+}
+
+a {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	margin: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+p {
+	margin-top: 20px;
+	line-height: 18px;
+}
+
+blockquote, .quote {
+	margin: 30px 0 30px 40px;
+	padding: 7px;
+	border: 1px dotted #fdfdfd;
+	font-style: italic;
+}
+
+code, .listing {
+	display: block;
+	margin: 20px 0 0 20px;
+	padding: 7px 7px 7px 35px;
+	background: url(/images/bg-listing.png) left 50% repeat-y;
+	font-family: Courier;
+}
+
+.link-locale {
+	border-bottom: 1px dotted #ffffff;
+}
+
+.link-locale:hover {
+	border: none;
+}
+
+.screenshot {
+	margin: 20px 0 0;
+	text-align: center;
+	white-space: pre-line;
+}
+
+.screenshot span {
+	font-size: 11px;
+}
+
+.hide {
+	display: none;
+}
+
+
+/*
+	Leftside (and pull)
+*/
+#leftside, #pull {
+	z-index: 3;
+	float: left;
+	padding: 0 5px;
+	width: 19%;
+	max-width: 190px;
+	min-width: 125px;
+	min-height: 100%;
+}
+
+#pull {
+	margin-left: 25px;
+}
+
+#leftside {
+	position: fixed;
+	left: 20px;
+	background: url(/images/bg-leftside.jpg);
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+
+#leftside .logotype {
+	margin-left: 5px;
+	padding-top: 10px;
+}
+
+#leftside .menu {
+	margin-top: 16%;
+}
+
+#leftside .menu a {
+	display: block;
+	font: small-caps bold 14px Arial, sans-serif;
+	text-transform: lowercase;
+	text-decoration: none;
+	color: #000000;
+}
+
+#leftside .menu a:hover {
+	color: #555555;
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+}
+
+#leftside .social {
+	margin-top: 50%;
+	text-align: center;
+}
+
+#leftside .social a:hover {
+	opacity: 0.7;
+}
+
+#leftside .vk, #leftside .fb, #leftside .gl {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(/images/icons.png) no-repeat;
+}
+
+#leftside .fb {
+	background-position: 0 -24px;
+}
+
+#leftside .gl {
+	background-position: 0 -49px;
+}
+
+#leftside .copyright {
+	position: absolute;
+	bottom: 5px;
+	font-size: 10px;
+	color: #000000;
+}
+
+
+/*
+	Content
+*/
+#content-bg {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: url(/images/bg-content.png);
+}
+
+#content {
+	z-index: 3;
+	float: left;
+	position: relative;
+	padding: 15px;
+	width: 70%;
+	max-width: 1000px;
+}
+
+#content .data {
+	padding: 5px 0 0 20px;
+}
+
+#content h1 {
+	margin: 20px 10px 10px;
+	letter-spacing: 1px;
+}
+
+#content p {
+	font-size: 14px;
+}
+
+
+/*
+	Powered by
+*/
+#powered-by {
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+}
+
+#powered-by a {
+	font: bold 10px Arial, sans-serif;
+	text-decoration: none;
+	color: #333333;
+}
+
+#powered-by div {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(/images/icons.png) 0 -70px no-repeat;
+}
+
+
+/*
+	Modile design and media queries
+*/
+@media all and (max-height: 750px)
+{
+	body {
+		background-size: cover;
+	}
+}

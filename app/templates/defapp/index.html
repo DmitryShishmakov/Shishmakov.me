@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Сайт Дмитрия Шишмакова</title>
+		<meta name="description" content="{{ data.description }}" />
+		<meta name="keywords" content="{{ data.keywords }}" />
+		<meta name="viewport" content="width=1024" />
+		<link rel="stylesheet" href="/css/all.css" />
+		<link rel="stylesheet" href="/css/lightbox.css" />
+		<link rel="stylesheet" href="/css/print.css" media="print" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/lightbox.js"></script>
+		<script src="js/all.js"></script>
+	</head>
+	<body>
+
+		<!-- Desktop design -->
+		<div id="leftside">
+			<div class="logotype">
+				<a href="/" onclick="return content.close();"><img src="/images/logotype.png" alt=""></a>
+			</div>
+			<div class="menu">
+				<a href="/about" title="Обо мне" onclick="return content.load(this);">Обо мне</a>
+				<a href="/portfolio" title="Портфолио" onclick="return content.load(this);">Портфолио</a>
+				<a href="/blog" title="Блог" onclick="return content.load(this);">Блог</a>
+				<a href="/contacts" title="Контакты" onclick="return content.load(this);">Контакты</a>
+			</div>
+			<div class="social">
+				<a href="http://vk.com/dmishi"><div class="vk"></div></a>
+				<a href="http://fb.com/shishmakov"><div class="fb"></div></a>
+				<a href="https://plus.google.com/118234707046976407929/posts"><div class="gl"></div></a>
+			</div>
+			<div class="copyright">
+				2012&nbsp;&copy;&nbsp;Все права защищены
+			</div>
+			&nbsp;
+		</div>
+
+		<div id="pull"></div>
+		<div id="content-bg" {% if page != '1' %}class="hide"{% endif %}></div>
+		<div id="content" {% if page != '1' %}class="hide"{% endif %}>
+			<h1 id="content-header">/ {{ data.header }}</h1>
+			<div id="content-data" class="data">{{ data.data }}</div>
+		</div>
+		<div id="powered-by">
+			<a href="http://shishmakov.me">
+				Разработка сайта:
+				<div></div>
+			</a>
+		</div>
+
+		<!-- Mobile design -->
+		<div id="footer">
+			<div class="link-top"></div>
+			<div class="menu"></div>
+			<div class="social"></div>
+			<div class="copyright"></div>
+		</div>
+
+	</body>
+</html>
